@@ -1,7 +1,6 @@
-console.log(document);
+// console.log(document);
 
 const pageBanner = document.getElementById("page-banner");
-console.log(pageBanner);
 const bookList = document.getElementById("book-list");
 
 // Class
@@ -10,4 +9,10 @@ Array.from(titles).forEach((title) => console.log(title));
 
 //Tag
 const lis = document.getElementsByTagName("li");
-console.log(lis);
+
+//Query Selector
+const wrapper = document.querySelector("#wrapper");
+const wmf = document.querySelector("#book-list li:nth-child(2) .name");
+
+const book = document.querySelectorAll("#book-list li .name");
+book.forEach((b) => console.log(b));
