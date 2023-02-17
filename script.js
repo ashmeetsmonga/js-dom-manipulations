@@ -30,5 +30,14 @@ console.log(clonedBanner);
 const bookList = document.querySelector("#book-list");
 console.log("parent node:", bookList.parentNode); //parentNode === parentElement
 
-console.log(bookList.childNodes);
-console.log(bookList.children);
+console.log("Child Nodes with line breaks", bookList.childNodes);
+console.log("Child Elements", bookList.children);
+
+//DOM Traversal(Sibling)
+console.log("Next sibling with line breaks", bookList.nextSibling);
+console.log("Next element sibling", bookList.nextElementSibling);
+
+console.log("Previous sibling with line breaks", bookList.previousSibling);
+console.log("Previous element sibling", bookList.previousElementSibling);
+
+bookList.previousElementSibling.querySelector("p").innerHTML += "<br>Too cool for everyone else";
