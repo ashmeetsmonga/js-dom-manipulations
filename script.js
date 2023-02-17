@@ -1,7 +1,7 @@
 // console.log(document);
 
 const pageBanner = document.getElementById("page-banner");
-const bookList = document.getElementById("book-list");
+// const bookList = document.getElementById("book-list");
 
 // Class
 const titles = document.getElementsByClassName("title");
@@ -25,3 +25,10 @@ console.log(banner.hasChildNodes());
 
 const clonedBanner = banner.cloneNode(true); //true means insides are also cloned
 console.log(clonedBanner);
+
+//DOM Traversal
+const bookList = document.querySelector("#book-list");
+console.log("parent node:", bookList.parentNode); //parentNode === parentElement
+
+console.log(bookList.childNodes);
+console.log(bookList.children);
