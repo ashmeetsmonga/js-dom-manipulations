@@ -41,3 +41,17 @@ console.log("Previous sibling with line breaks", bookList.previousSibling);
 console.log("Previous element sibling", bookList.previousElementSibling);
 
 bookList.previousElementSibling.querySelector("p").innerHTML += "<br>Too cool for everyone else";
+
+//Events
+const h2 = document.querySelector("#book-list h2");
+h2.addEventListener("click", (e) => {
+	console.log(e.target);
+});
+
+let deleteButtons = document.querySelectorAll("#book-list .delete");
+deleteButtons.forEach((delBtn) =>
+	delBtn.addEventListener("click", (e) => {
+		const parLi = e.target.parentElement;
+		parLi.parentNode.removeChild(parLi);
+	})
+);
