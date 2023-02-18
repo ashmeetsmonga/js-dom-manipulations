@@ -98,3 +98,10 @@ bookList.getAttribute("id");
 bookList.setAttribute("class", "list-2");
 bookList.hasAttribute("class");
 bookList.removeAttribute("class");
+
+//Hide Books (Checkbox events)
+const hideBox = document.querySelector("#hide");
+hideBox.addEventListener("change", function (e) {
+	if (hideBox.checked) list.style.display = "none";
+	else list.style.display = "initial";
+});
