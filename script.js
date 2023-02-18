@@ -92,3 +92,9 @@ addForm.addEventListener("submit", (e) => {
 	bookLi.appendChild(deleteBtnSpan);
 	list.appendChild(bookLi);
 });
+
+//Attributes
+bookList.getAttribute("id");
+bookList.setAttribute("class", "list-2");
+bookList.hasAttribute("class");
+bookList.removeAttribute("class");
