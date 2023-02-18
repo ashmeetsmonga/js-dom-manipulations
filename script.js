@@ -67,6 +67,7 @@ bookList.addEventListener("click", (e) => {
 //Forms
 document.forms; // returns all forms
 const addForm = document.forms["add-book"];
+const list = bookList.querySelector("ul");
 
 addForm.addEventListener("submit", (e) => {
 	e.preventDefault();
@@ -82,8 +83,12 @@ addForm.addEventListener("submit", (e) => {
 	bookNameSpan.textContent = value;
 	deleteBtnSpan.textContent = "delete";
 
+	//adding style and classes
+	bookNameSpan.classList.add("name");
+	deleteBtnSpan.classList.add("delete");
+
 	//appending to DOM
 	bookLi.appendChild(bookNameSpan);
 	bookLi.appendChild(deleteBtnSpan);
-	bookList.appendChild(bookLi);
+	list.appendChild(bookLi);
 });
