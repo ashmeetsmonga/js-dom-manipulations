@@ -117,3 +117,17 @@ searchBar.addEventListener("keyup", function (e) {
 		else book.style.display = "none";
 	});
 });
+
+//tabbed content
+const tabs = document.querySelector(".tabs");
+const panels = document.querySelectorAll(".panel");
+
+tabs.addEventListener("click", function (e) {
+	if (e.target.tagName === "LI") {
+		const selectedPanel = document.querySelector(e.target.dataset.target);
+		panels.forEach((panel) => {
+			if (panel === selectedPanel) panel.classList.add("active");
+			else panel.classList.remove("active");
+		});
+	}
+});
